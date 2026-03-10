@@ -19,7 +19,7 @@ class Restaurant:
 
 
 
-restaurant = Restaurant("Sanama", "Masakan Padang")
+restaurant = Restaurant("majestic", "Masakan Padang")
 
 
 print("Jumlah pelanggan yang telah dilayani :", restaurant.number_served)
