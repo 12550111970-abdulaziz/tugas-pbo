@@ -13,20 +13,16 @@ class Restaurant:
 
 restaurant = Restaurant("majestic", "Masakan padang")
 
-
 print("Nama Restoran :", restaurant.nama_restoran)
 print("Jenis Masakan :", restaurant.jenis_masakan)
 print()
 
-
 restaurant.deskripsikan_restoran()
 restaurant.buka_restoran()
-
 
 restaurant1 = Restaurant("majestic", "Masakan Padang")
 restaurant2 = Restaurant("daycino", "Masakan italia")
 restaurant3 = Restaurant("razqa", "Masakan melayu")
-
 
 restaurant1.deskripsikan_restoran()
 print()

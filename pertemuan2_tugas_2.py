@@ -1,4 +1,3 @@
-# Membuat class User
 class User:
     def __init__(self, nama_depan, nama_belakang, umur, email, kota):
         self.nama_depan = nama_depan
@@ -6,28 +5,35 @@ class User:
         self.umur = umur
         self.email = email
         self.kota = kota
-
-    def deskripsikan_user(self):
+        self.login_attempts = 0   
+        
+    def describe_user(self):
         print("Nama Lengkap :", self.nama_depan, self.nama_belakang)
         print("Umur :", self.umur)
         print("Email :", self.email)
         print("Kota :", self.kota)
 
-    def sapa_user(self):
+    def greet_user(self):
         print("Halo", self.nama_depan + ", selamat datang!\n")
 
+    def increment_login_attempts(self):
+        self.login_attempts += 1
 
-# Membuat beberapa objek User
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+
 user1 = User("abdul", "aziz", 19, "abdaziz20@email.com", "Pekanbaru")
-user2 = User("nabila", "amelia", 18, "nbllamelia@email.com", "Medan")
-user3 = User("ahmad", "yoga", 21, "ahmdyoga@email.com", "pasir pengaraian")
 
-# Memanggil method untuk setiap user
-user1.deskripsikan_user()
-user1.sapa_user()
+user1.describe_user()
+user1.greet_user()
 
-user2.deskripsikan_user()
-user2.sapa_user()
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+user1.increment_login_attempts()
 
-user3.deskripsikan_user()
-user3.sapa_user()
+print("Jumlah percobaan login :", user1.login_attempts)
+
+user1.reset_login_attempts()
+
+print("Jumlah percobaan login setelah reset :", user1.login_attempts)
